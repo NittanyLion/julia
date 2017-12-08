@@ -116,6 +116,7 @@ Base.isless(::Nullable, ::Nullable)
 Base.ifelse
 Base.lexcmp
 Base.lexless
+Core.typeassert
 Core.typeof
 Core.tuple
 Base.ntuple
@@ -125,6 +126,10 @@ Base.finalizer
 Base.finalize
 Base.copy
 Base.deepcopy
+Base.getproperty
+Base.setproperty!
+Core.getfield
+Core.setfield!
 Core.isdefined
 Base.@isdefined
 Base.convert
@@ -134,7 +139,7 @@ Base.widen
 Base.identity
 ```
 
-## Dealing with Types
+## Properties of Types
 
 ```@docs
 Base.supertype
@@ -151,8 +156,6 @@ Base.eps(::Type{<:AbstractFloat})
 Base.eps(::AbstractFloat)
 Base.promote_type
 Base.promote_rule
-Core.getfield
-Core.setfield!
 Base.fieldoffset
 Core.fieldtype
 Base.isimmutable
