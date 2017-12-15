@@ -2166,6 +2166,8 @@ end
 
 # issue #20899
 # TODO: delete cpu_name deprecation in base/sysinfo.jl
+# TODO: delete JULIA_HOME deprecation code in src/init.c
+@deprecate_binding JULIA_HOME Sys.BINDIR
 
 @eval LinAlg begin
     @deprecate chol!(x::Number, uplo) chol(x) false
